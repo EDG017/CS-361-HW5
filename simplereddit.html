@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Simple Reddit</title>
+  <script src="index.js"></script>
+  <script src="bundle.js"></script>
+  <link rel="stylesheet" href="pages.css" type="text/css">
+ </head>
+
+ <body>
+
+     <h1>
+        <span class="multicolortext">Simple Reddit</span>
+     </h1>
+
+<div class="container">
+    <div class="selector">
+        <form id="scrapper" method="GET" action="/queue">  <!--the action here will scrape the desired content from reddit-->
+            <label id="subred" for="subreddit">Please type in the SubReddit you would like to view:</label>
+            <br>
+            <input type="text" id="subs" name="subreddit">
+            <br>
+            <label id="posts" for="postcount">Select the amount of posts you would like to view:</label>
+            <br>
+            <input type="number" min="1" max="10" id="postcount" name="postcount">
+            <br>
+            <br>
+            <input type="submit" value="Submit" onClick="displayLoop()">
+        </form>
+    </div>
+    <br>
+    <br>
+
+    <div class="micro">
+        <form id="micro">  <!---action here will use teammates microservice to encrypt content-->
+            <label id="encryptsubmit">Click Encrypt if you would like to encrypt SubReddit posts text content:</label>
+            <br>
+            <input type="submit" value="Encrypt">
+            <br>
+            <br>
+            <br>
+            <label id="decryptsubmit">Click Decrypt to decrypt the post text content:</label>
+            <br>
+            <input type="submit" value="Decrypt">
+        </form>
+    </div>
+</div>
+ </body>
